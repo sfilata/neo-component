@@ -1,4 +1,4 @@
-export function compile(str, options) {
+function compile(str, options) {
   templateSettings.interpolate = /{([\s\S]+?)}/g;
   let compiled = template(str);
   return compiled(options);
@@ -10,7 +10,7 @@ export function compile(str, options) {
  * @param {string[]} keyStr the key string arr to judge duplicated elements
  * @returns T[] return the remove duplicated result
  */
-export function removeDuplicate(arr, keyStr) {
+function removeDuplicate(arr, keyStr) {
   const tempResultMap = new Map();
   arr.forEach((item) => {
     const key = keyStr.reduce((acc, cur) => acc + item[cur], '');
@@ -24,7 +24,7 @@ export function removeDuplicate(arr, keyStr) {
  * @param {the Url needed to be parsed} url
  * @returns
  */
-export function parseUrl(url) {
+function parseUrl(url) {
   const searchStr = ~url.indexOf('?') ? url.slice(url.indexOf('?')) : '';
 
   const result = {};
@@ -36,3 +36,9 @@ export function parseUrl(url) {
   });
   return result;
 }
+
+module.exports = {
+  compile,
+  removeDuplicate,
+  parseUrl
+};
