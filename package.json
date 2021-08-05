@@ -1,0 +1,20 @@
+{
+  "name": "neo-component",
+  "version": "1.0.0",
+  "description": "The custom component registory for react.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.zhlh6.cn:sfilata/neo-component.git"
+  },
+  "keywords": [
+    "component",
+    "react",
+    "custom"
+  ],
+  "author": "sfilata",
+  "license": "MIT"
+}
